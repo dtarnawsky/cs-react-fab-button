@@ -1,5 +1,6 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonFab, IonFabButton, IonIcon, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import { camera } from 'ionicons/icons';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -17,6 +18,11 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <ExploreContainer />
+        <IonFab aria-label={'new diary'} vertical='bottom' horizontal='end' slot='fixed'>
+          <IonFabButton aria-label={'new diary'} routerLink="https://google.com">
+            <IonIcon aria-label={'new diary'} icon={camera} />
+          </IonFabButton>
+        </IonFab>
       </IonContent>
     </IonPage>
   );
